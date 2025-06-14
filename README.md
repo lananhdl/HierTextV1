@@ -57,7 +57,7 @@ jupyter notebook HierText_Visualization.ipynb
 ```
 
 Run the following command to visualize and evaluation the dataset in a colab:
-[hiertext.ipynb](hiertext.ipynb)
+[hiertext.ipynb](hiertext_colab.ipynb)
 ```
 
 #
