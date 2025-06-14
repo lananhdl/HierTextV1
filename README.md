@@ -1,57 +1,26 @@
 HiertextNhom1
 ==============================
+download the dataset from https://www.kaggle.com/datasets/uciml/iris
+ then unzip the file and put it in the gt folder
 
-A short description of the project.
+==============================
+The images are hosted by [CVDF](http://www.cvdfoundation.org/). To download them
+one needs to install
+[AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+and run the following:
 
-Project Organization
-------------
+```
+aws s3 --no-sign-request cp s3://open-images-dataset/ocr/train.tgz .
+aws s3 --no-sign-request cp s3://open-images-dataset/ocr/validation.tgz .
+aws s3 --no-sign-request cp s3://open-images-dataset/ocr/test.tgz .
+tar -xzvf train.tgz
+tar -xzvf validation.tgz
+tar -xzvf test.tgz
+```
+then save the images in the `images` folder
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+===============================
+# HierText analysis:
+run .py in the notebooks folder to analyze the dataset
 
-
---------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+```
